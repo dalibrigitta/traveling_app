@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where To Travel?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header class="header">
+  <h1>🌸 Where To Travel?</h1>
+  <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+</header>
+
+<main class="container">
+
+
+  <section class="filters">
+    <div class="form-group">
+      <label for="continent">🌎 Continent</label>
+      <select id="continent" required>
+        <option value="">Select continent</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="country">🏳️ Country</label>
+      <select id="country" required>
+        <option value="">Select country</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="start-date">📅 Start Date</label>
+      <input type="date" id="start-date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="end-date">📆 End Date</label>
+      <input type="date" id="end-date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="min-temp">🌡️ Min Temperature (°C)</label>
+      <input type="number" id="min-temp" placeholder="Enter minimum temperature">
+    </div>
+
+    
+    <div class="btn-group">
+      <button id="search-btn">Search</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+  </section>
+
+
+  <section class="results">
+    <h2>🏙️ Recommended Cities</h2>
+    <div id="results-container" class="results-grid"></div>
+  </section>
+
+  
+  <div id="map"></div>
+
+</main>
+
+
+<script src="script.js" defer></script>
+
+
+  <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3kO0TmvwSaRfdRWFS8x3sGY1a6wMnyaI&libraries=places&callback=initMap&language=en&region=US"
+    async 
+    defer>
+  </script>
+</body>
+</html>
